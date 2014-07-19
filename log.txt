@@ -1,0 +1,6 @@
+Given a list of jobs
+I should be able to parse these into a domain object
+And store them in the database.
+
+ftp://ftp.zois.co.uk/pub/jcp/
+
