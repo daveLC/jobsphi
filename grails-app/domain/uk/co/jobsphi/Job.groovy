@@ -15,11 +15,14 @@ class Job {
 	String applyLink
 	Date dateAdded
 	Date dateCreated
-	Date lastModified
+	Date lastUpdated
 	
 	static mapping = {
-	
+
+        title type: 'text'
+        salary type: 'text'
 		description type: 'text'
+        applyLink type: 'text'
 		version: false
 	}
 	

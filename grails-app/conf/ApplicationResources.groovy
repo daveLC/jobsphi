@@ -1,5 +1,5 @@
 modules = {
-    application {
-        resource url:'js/application.js'
+    jobsphiClient {
+        resource url:'/css/main.css'
     }
 }
