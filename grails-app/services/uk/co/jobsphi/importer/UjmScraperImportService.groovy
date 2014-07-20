@@ -26,13 +26,14 @@ class UjmScraperImportService {
             'MID': 'Midlands',
             'Southern': 'Southern',
             'WA': 'Wales',
-            'Yorkshire': 'Yorkshire'
+            'Yorkshire': 'Yorkshire',
+            'NW': 'North West',
     ]
 
     def importFile() {
 		
-		def pathToFile = "scrape-data/UJM-scrape-2014-07-18.csv"
-        //def pathToFile = "scrape-data/test.csv"
+		//def pathToFile = "scrape-data/UJM-scrape-2014-07-18.csv"
+        def pathToFile = "scrape-data/test.csv"
 
         CSVReader reader = new CSVReader(new FileReader(pathToFile));
         List rows = reader.readAll();

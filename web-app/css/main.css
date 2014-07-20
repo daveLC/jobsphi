@@ -1,6 +1,7 @@
 body {
     font-family: Arial;
     font-size: 85%;
+    color: #222;
 }
 
 ul.jobs {
@@ -28,6 +29,14 @@ ul.jobs li p label {
     width: 50px;
 }
 
-ul.jobs li p span {
+.pagination {
+    margin-bottom: 10px;
 }
 
+.pagination a {
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid #aaa;
+    color: #222;
+    text-decoration: none;
+}

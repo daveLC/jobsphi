@@ -1,5 +1,10 @@
 package uk.co.jobsphi
 
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
+
+@ToString(includeNames = true, includeFields = true, excludes = 'metaClass')
+@EqualsAndHashCode
 class Job {
 
 	String jobId

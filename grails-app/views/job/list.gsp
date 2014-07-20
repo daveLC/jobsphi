@@ -7,7 +7,12 @@
 <body>
 
     <h1>Job list</h1>
-    <p>${total} jobs</p>
+
+    <p>There are ${total} jobs available</p>
+    <div class="pagination">
+        <g:paginate total="${total}" action="list" max="20"/>
+    </div>
+
     <ul class="jobs">
         <g:each in="${jobs}" var="job">
 
@@ -31,5 +36,6 @@
             </li>
         </g:each>
     </ul>
+
 </body>
 </html>

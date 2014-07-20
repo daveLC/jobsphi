@@ -9,5 +9,8 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
+
+        // RESTService api
+        "/api/job"(resources: 'job')
 	}
 }
