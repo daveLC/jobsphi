@@ -5,8 +5,13 @@ class ImportController {
     def ujmScraperImportService
 
     def index() {
-        ujmScraperImportService.importFile()
-        render 'done'
+        def files = ujmScraperImportService.listFiles()
+        [files:files]
     }
 
+    def importFile(String fileName) {
+        ujmScraperImportService.importFile(fileName)
+        flash.message = "Import completed successfully"
+        redirect(action: 'index')
+    }
 }
