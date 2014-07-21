@@ -1,10 +1,14 @@
 package uk.co.jobsphi.importer
 
 import au.com.bytecode.opencsv.CSVReader
+import org.springframework.beans.BeansException
+import org.springframework.context.ApplicationContext
+import org.springframework.context.ApplicationContextAware
 import uk.co.jobsphi.Job
 
 class UjmScraperImportService {
 
+    def grailsApplication
     static transactional = false
 
     static def JOB_ID = 0
@@ -31,11 +35,12 @@ class UjmScraperImportService {
     ]
 
     def importFile() {
-		
-		//def pathToFile = "scrape-data/UJM-scrape-2014-07-18.csv"
-        def pathToFile = "scrape-data/test.csv"
 
-        CSVReader reader = new CSVReader(new FileReader(pathToFile));
+		//def pathToFile = "/scrape-data/UJM-scrape-2014-07-18.csv"
+        def pathToFile = "/scrape-data/test.csv"
+        def myFile = grailsApplication.mainContext.getResource(pathToFile).getFile()
+
+        CSVReader reader = new CSVReader(new FileReader(myFile as File));
         List rows = reader.readAll();
 
         rows.each { row ->
